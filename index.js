@@ -5,7 +5,7 @@ const context = board.getContext("2d");
 // bird var
 const birdWidth = 34;
 const birdHeight = 24;
-const birdX = board.width / 8;
+const birdX = board.width;
 const birdY = board.height / 0.5;
 const birdImg = new Image();
 const bird = {
@@ -95,7 +95,7 @@ function update () {
         };
     };
 
-    while(pipeArray.length > 0 && pipeArray[0].x < - pipeWidth) {
+    while(pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) {
         pipeArray.shift();
     };
 
